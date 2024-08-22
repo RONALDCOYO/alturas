@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Permisos de Alturas</title>
+</head>
+<body>
+    <h1>Lista de Permisos de Alturas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Cédula</th>
+                <th>Número de Carnet</th>
+                <th>Fecha de Curso</th>
+                <th>Entidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for permiso in permisos %}
+            <tr>
+                <td>{{ permiso.id }}</td>
+                <td>{{ permiso.nombre }}</td>
+                <td>{{ permiso.cedula }}</td>
+                <td>{{ permiso.numero_carnet }}</td>
+                <td>{{ permiso.fecha_curso }}</td>
+                <td>{{ permiso.entidad }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
